@@ -1,0 +1,13 @@
+145  echo "ok" >> Readme.md
+  146  git init
+  147  git add Readme.md
+  148  git commit -m "komatkamit 1"
+  149  git branch -M main
+  150  git remote add origin git@github.com:/hayminid/ok..git
+  151  git push -u origin main
+  152  vi abc.txt
+  153  git commit -m "pertama tuk abc.txt"
+  154  git branch -M main
+  155  gitu push -u origin main
+  156  git push -u origin main
+
