@@ -1,0 +1,21 @@
+---
+
+- name: Network Getting Started First Playbook
+  connection: ansible.netcommon.network_cli
+  gather_facts: false
+  hosts: all
+  tasks:
+
+    - name: get config for IOS Devices
+      cisco.ios.ios_facts:
+        gather_subset: all
+
+
+    - name: Display the config
+      debug:
+        msg: "The Hostname is {{ ansible_net_hostname }} and the OS is {{ansible_net_version }}"
+    - name: Backup current switch config (ios)
+  cisco.ios.ios_config:
+    backup: yes
+  register: backup_ios_location
+  when: ansible_network_os == 'cisco.ios.ios'
