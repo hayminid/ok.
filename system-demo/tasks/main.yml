@@ -1,0 +1,5 @@
+---
+# tasks file for system-demo
+- name: configure DNS
+  ios_config:
+    lines: ip name-server {{dns}}

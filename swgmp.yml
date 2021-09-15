@@ -1,0 +1,8 @@
+---
+- name: config sw gmp
+  hosts: swl02
+  connection: network_cli
+  gather_facts: no
+
+  roles:
+    - administrasi-cisco

@@ -1,0 +1,17 @@
+---
+# tasks file for administrasi-cisco
+- name: create production vlan
+  ios_vlans:
+    config:
+      - name: tiga
+        vlan_id: 3
+        state: active
+        shutdown: disabled
+      - name: twenty
+        vlan_id: 20
+        mtu: 610
+        state: active
+        shutdown: enabled
+      - name: vlan_30
+        vlan_id: 30
+        state: suspend

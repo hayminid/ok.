@@ -1,0 +1,4 @@
+---
+# vars file for administrasi-cisco
+vlan_id: "2 3 4 5"
+
