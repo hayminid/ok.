@@ -12,6 +12,7 @@
         mtu: 610
         state: active
         shutdown: enabled
+- name: tambah interface vla        
   ios_interface:
     config:
       - name: vlan_30
