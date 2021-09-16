@@ -12,6 +12,8 @@
         mtu: 610
         state: active
         shutdown: enabled
+  ios_interface:
+    config:
       - name: vlan_30
         vlan_id: 30
         state: suspend
