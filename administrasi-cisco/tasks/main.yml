@@ -12,10 +12,10 @@
         mtu: 610
         state: active
         shutdown: enabled
-- name: update interface         
-  ios_interface:
+- name: Override device configuration of all l2 interfaces with provided configuration
+  ios_l2_interfaces:
     config:
-      - name: GigabitEthernet0/0
-        description: 'uplink'
-      - name: GigabitEthernet0/1
-        description: 'perminyakan'
+      - name: GigabitEthernet0/3
+        access:
+          vlan: 30
+    state: overridden
