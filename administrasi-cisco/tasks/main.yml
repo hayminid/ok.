@@ -15,7 +15,7 @@
 - name: update interface         
   ios_interface:
     config:
-      - name: gi0/0
+      - name: GigabitEthernet0/0
         description: 'uplink'
-      - name: gi0/1
+      - name: GigabitEthernet0/1
         description: 'perminyakan'
