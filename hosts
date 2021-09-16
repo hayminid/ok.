@@ -2,3 +2,10 @@
 192.168.1.2
 [ciscolab]
 sandbox-iosxe-recomm-1.cisco.com
+
+[linux]
+4 ansible_host=192.168.1.4
+
+[linux:vars]
+ansible_user=eve
+

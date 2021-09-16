@@ -15,3 +15,6 @@
       - name: vlan_30
         vlan_id: 30
         state: suspend
+      - name: interface vlan 30
+        desc: 'perminyakan'
+   state: merged

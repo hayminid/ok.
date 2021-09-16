@@ -1,0 +1,8 @@
+---
+# tasks file for remoted
+- name: install apache& mariaDB
+  package:
+    name:
+      - httpd
+      - mariadb-server
+    state: latest

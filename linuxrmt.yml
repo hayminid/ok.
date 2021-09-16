@@ -1,0 +1,9 @@
+---
+- name: executelinux 
+  hosts: remoted
+  connection: network_cli
+  gather_facts: no
+
+  roles:
+    - remoted 
+
