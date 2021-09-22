@@ -38,3 +38,9 @@
       - description test interface
       - ip address 172.31.1.1 255.255.255.0
     parents: interface vlan12
+- name: enable interface vlan UP
+  ios_interfaces:
+    config:
+      - name: vlan12
+        enabled: True
+  state: merged
