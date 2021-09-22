@@ -19,19 +19,6 @@
         access:
           vlan: 30
     state: overridden
-- name: remove and Add vlan interface using ios_interfaces
-  ios_interfaces:
-    config:
-      - name: vlan23
-        description: "VLAN23_test"
-        enabled: False
-      - name: vlan32
-        description: "VLAN32_ipaddress"
-        enabled: True
-      - name: vlan12
-        description: "plantation"
-        enabled: True 
-    state: merged
 - name: configure interface settings
   ios_config:
     lines:
