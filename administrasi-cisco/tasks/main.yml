@@ -37,9 +37,16 @@
     config:
       - name: vlan32
         ipv4:
-        - address: 192.168.0.23 255.255.255.0
+        - address: 192.168.1.23/32
+      - name: GigabitEthernet1/3
+        ipv4:
+        - address: 192.168.168.1/24
+      - name: GigabitEthernet1/2
+        ipv4:
+        - address: 192.168.16.16 255.255.255.0
       - name: vlan12
         ipv4:
         - address: 192.168.24.24 255.255.255.0
-    state: merged
+          secondary: True
+    state: replaced
 
