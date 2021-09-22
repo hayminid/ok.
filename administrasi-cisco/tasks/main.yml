@@ -32,21 +32,9 @@
         description: "plantation"
         enabled: True 
     state: merged
-- name: add ip address for vlan interface using ios_L3_interfaces
-  ios_l3_interfaces:
-    config:
-      - name: vlan32
-        ipv4:
-        - address: 192.168.1.23/32
-      - name: GigabitEthernet1/3
-        ipv4:
-        - address: 192.168.168.1/24
-      - name: GigabitEthernet1/2
-        ipv4:
-        - address: 192.168.16.16 255.255.255.0
-      - name: vlan12
-        ipv4:
-        - address: 192.168.24.24 255.255.255.0
-          secondary: True
-    state: replaced
-
+- name: configure interface settings
+  ios_config:
+    lines:
+      - description test interface
+      - ip address 172.31.1.1 255.255.255.0
+    parents: interface vlan12
