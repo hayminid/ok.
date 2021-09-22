@@ -20,8 +20,9 @@
           vlan: 30
     state: overridden
 - name: Add interface using aggregate
-  ios_interface:
-    aggregate:
-    - { name: loopback0, description: test-interface-1 }
-    - { name: loopback2, description: test-interface-2 }
-    state: present
+  ios_interfaces:
+    config:
+      - name: vlan23
+        description: "VLAN23_test"
+        enabled: True
+    state: merged
