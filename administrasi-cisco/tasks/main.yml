@@ -22,7 +22,7 @@
 - name: Add interface using aggregate
   ios_interface:
     aggregate:
-    - { name: loopback1, mtu: 256, description: test-interface-1 }
-    - { name: loopback2, mtu: 516, description: test-interface-2 }
+    - { name: loopback1, description: test-interface-1 }
+    - { name: loopback2, description: test-interface-2 }
     duplex: full
     state: present
