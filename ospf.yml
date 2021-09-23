@@ -1,0 +1,22 @@
+---
+- name: config ospf di router
+  hosts: satu 
+  connection: network_cli
+  gather_facts: no
+
+  roles:
+    - satu
+- name: config ospf di router
+  hosts: enam
+  connection: network_cli
+  gather_facts: no
+
+  roles:
+    - enam
+- name: config ospf di router
+  hosts: tuju 
+  connection: network_cli
+  gather_facts: no
+
+  roles:
+    - tuju 
