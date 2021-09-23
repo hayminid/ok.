@@ -31,3 +31,4 @@
       - no shutdown
     parents:
       - int ra Gi 0/0-1
+    lines: hostname {{ inventory_hostname }}

@@ -26,4 +26,5 @@
     lines:
       - no shutdown
     parents: interface GigabitEthernet0/0
+    lines: hostname {{ inventory_hostname }}
       

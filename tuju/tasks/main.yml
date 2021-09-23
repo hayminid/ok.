@@ -26,3 +26,4 @@
       - network 23.23.23.3 0.0.0.0 area 2
     parents:
       - router ospf 3
+    lines: hostname {{ inventory_hostname }}
