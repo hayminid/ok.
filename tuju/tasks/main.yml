@@ -15,15 +15,19 @@
         ipv4:
           - address: 23.23.23.3/24
     state: merged
-- name: enable interface and add OSPF
+- name: enable interface 
   ios_config:
     lines:
       - no shutdown
     parents: interface GigabitEthernet 0/1
+- name: setup OSPF
+  ios_config:
     lines:
       - router-id 3.3.3.3
       - network 3.3.3.3 0.0.0.0 area 2
       - network 23.23.23.3 0.0.0.0 area 2
     parents:
       - router ospf 3
+- name: setup hostname
+  ios_config:
     lines: hostname {{ inventory_hostname }}

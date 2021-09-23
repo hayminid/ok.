@@ -18,7 +18,7 @@
         ipv4:
         - address: 23.23.23.2/24
     state: merged
-- name: add ospf & enable interfaces
+- name: add ospf 
   ios_config:
     lines:
       - router-id 2.2.2.2
@@ -27,8 +27,12 @@
       - network 23.23.23.2 0.0.0.0 area2
     parents:
       - router ospf 2
+- name: enable interface gi 0/0-1
+  ios_config:  
     lines:
       - no shutdown
     parents:
       - int ra Gi 0/0-1
+- name: update hostname
+  ios_config:
     lines: hostname {{ inventory_hostname }}

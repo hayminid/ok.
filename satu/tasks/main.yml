@@ -23,8 +23,12 @@
       - network 12.12.12.1 0.0.0.0 area 1
     parents:
       - router ospf 1
+- name: enable interfaces
+  ios_config:
     lines:
       - no shutdown
     parents: interface GigabitEthernet0/0
+- name: setup hostname
+  ios_config:
     lines: hostname {{ inventory_hostname }}
       
