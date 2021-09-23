@@ -24,7 +24,7 @@
       - router-id 2.2.2.2
       - network 2.2.2.2 0.0.0.0 area 1
       - network 12.12.12.2 0.0.0.0 area 1
-      - network 23.23.23.2 0.0.0.0 area2
+      - network 23.23.23.2 0.0.0.0 area 2
     parents:
       - router ospf 2
 - name: enable interface gi 0/0-1
