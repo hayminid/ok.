@@ -1,2 +1,34 @@
 ---
 # tasks file for enam
+- name: create loopback0
+  ios_interfaces:
+    config:
+      - name: loopback0
+        enabled: True
+- name: add IP Address Router enam
+  ios_l2_interfaces:
+    config:
+      - name: loopback0
+        ipv4:
+        - address: 2.2.2.2/32
+      - name: GigabitEthernet0/0
+        ipv4:
+        - address: 12.12.12.2/24
+      - name: GigabitEthernet0/1
+        ipv4:
+        - address: 23.23.23.2/24
+    state: merged
+- name: add ospf & enable interfaces
+  ios_config:
+    lines:
+      - router-id 2.2.2.2
+      - network 2.2.2.2 0.0.0.0 area 1
+      - network 12.12.12.2 0.0.0.0 area 1
+      - network 23.23.23.2 0.0.0.0 area2
+    parents:
+      - router ospf 2
+    lines:
+      - no shutdown
+    parents:
+      - interfaces GigabitEthernet0/0
+      - interfaces GigabitEthernet0/1

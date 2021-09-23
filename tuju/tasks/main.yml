@@ -1,2 +1,26 @@
 ---
 # tasks file for tuju
+- name: add loopback 0
+  ios_interfaces:
+    config:
+      - name: loopback0
+        enabled: True
+- name: add ip address for loopback0 and gigabitethernet0/1
+  ios_l3_interfaces:
+    config:
+      - name: loopback0
+        ipv4:
+          - address: 3.3.3.3/32
+      - name: GigabitEthernet0/1
+        ipv4:
+          - address: 23.23.23.3/24
+    state: merged
+- name: enable interface and add OSPF
+  ios_config:
+    lines:
+      - no shutdown
+    parents: interface GigabitEthernet0/1
+    lines:
+      - router-id 3.3.3.3
+      - network 3.3.3.3 0.0.0.0 area 2
+      - network 23.23.23.3 0.0.0.0 area 2
