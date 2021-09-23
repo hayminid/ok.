@@ -6,7 +6,7 @@
       - name: loopback0
         enabled: True
 - name: add IP Address Router enam
-  ios_l2_interfaces:
+  ios_l3_interfaces:
     config:
       - name: loopback0
         ipv4:
