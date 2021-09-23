@@ -30,5 +30,4 @@
     lines:
       - no shutdown
     parents:
-      - interfaces GigabitEthernet0/0
-      - interfaces GigabitEthernet0/1
+      - interfaces ra GigabitEthernet0/0-1
