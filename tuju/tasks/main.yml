@@ -26,6 +26,7 @@
       - router-id 3.3.3.3
       - network 3.3.3.3 0.0.0.0 area 2
       - network 23.23.23.3 0.0.0.0 area 2
+      - area 2 virtual-l 2.2.2.2
     parents:
       - router ospf 3
 - name: setup hostname

@@ -25,6 +25,8 @@
       - network 2.2.2.2 0.0.0.0 area 1
       - network 12.12.12.2 0.0.0.0 area 1
       - network 23.23.23.2 0.0.0.0 area 2
+      - area 1 virtual-l 1.1.1.1
+      - area 2 virtual-l 3.3.3.3
     parents:
       - router ospf 2
 - name: enable interface gi 0/0-1
