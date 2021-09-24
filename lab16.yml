@@ -15,7 +15,7 @@
     - lab16dua
 - name: ospf lab16 tiga
   hosts: tiga
-  connection: network_clie
+  connection: network_cli
   gather_facts: no
 
   roles:
