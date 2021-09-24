@@ -18,10 +18,10 @@
 - name: ip address with ios_l3_interfaces
   ios_l3_interfaces:
     config:
-      - name: GigabitEthernet 0/0
+      - name: GigabitEthernet0/0
         ipv4:
         - address: 12.12.12.2/32
-      - name: loopback 0
+      - name: loopback0
         ipv4:
         - address: 2.2.2.2/32
     state: merged

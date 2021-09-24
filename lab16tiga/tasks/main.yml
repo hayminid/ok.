@@ -22,10 +22,10 @@
 - name: ip address with ios_l2_interfaces
   ios_l3_interfaces:
     config:
-      - name: GigabitEthernet 0/2
+      - name: GigabitEthernet0/2
         ipv4:
         - address: 13.13.13.3/24
-      - name: GigabitEthernet 0/1
+      - name: GigabitEthernet0/1
         ipv4:
         - address: 23.23.23.3/24
     state: merged
