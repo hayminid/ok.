@@ -9,6 +9,16 @@
 - name: hostname
   ios_config:
     lines: hostname {{ inventory_hostname }}
+- name: no shut interface
+  ios_config:
+    lines:
+      - int ra gi 0/1-2
+      - no sh
+- name: no shut interface
+  ios_config:
+    lines:
+      - int ra gi 0/1-2
+      - no sh
 - name: ip address with ios_l2_interfaces
   ios_l3_interfaces:
     config:
@@ -18,6 +28,7 @@
       - name: GigabitEthernet 0/1
         ipv4:
         - address: 23.23.23.3/24
+    state: merged
 - name: ios_config for IP Add loopback 0
   ios_config:
     lines:

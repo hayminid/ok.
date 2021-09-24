@@ -10,6 +10,11 @@
       - name: loopback0
         enabled: True
     state: merged
+- name: enable interface
+  ios_config:
+    lines:
+      - int ra gi 0/0-1
+      - no sh
 - name: ip address with ios_l3_interfaces
   ios_l3_interfaces:
     config:
