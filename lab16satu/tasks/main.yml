@@ -25,6 +25,13 @@
         ipv4:
         - address: 1.1.1.1/32
     state: merged
+- name: no shutdown interface
+  ios_config:
+    lines:
+      - int ra gi 0/0-2
+      - no sh
+      - int lo0
+      - no sh
 - name: setup router ospf
   ios_config:
     lines:
