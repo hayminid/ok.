@@ -5,7 +5,7 @@
     lines:
       - hostname {{ inventory_hostname }}
 - name: enable loopback 0
-  ios_intefaces:
+  ios_interfaces:
     config:
       - name: loopback 0
         enabled: True
