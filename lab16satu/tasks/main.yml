@@ -1,0 +1,32 @@
+---
+# tasks file for lab16satu
+- name: set hostname
+  ios_config:
+    lines:
+      - hostname {{ inventory_hostname}}
+- name: activate interface loopback0
+  ios_interfaces:
+    config:
+      name: loopback 0
+      enabled: True
+- name: ios_config ip address on interface gi 0/0
+  ios_config:
+    lines:
+      - description to tiga
+      - ip address 12.12.12.1 255.255.255.0
+    parents: interfaces GigabitEthernet 0/0
+- name: ios_l3_interfaces ip address
+  ios_l3_interfaces:
+    config:
+      - name: int gi 0/2
+        ipv4:
+        - address: 13.13.13.1/24
+      - name: lo 0
+        ipv4:
+        - address: 1.1.1.1/32
+    state: merged
+- name: setup router ospf
+  ios_config:
+    lines:
+      - network 0.0.0.0 255.255.255.255 area 0
+    parents: router ospf 1

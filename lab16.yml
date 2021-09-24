@@ -1,0 +1,22 @@
+---
+- name: ospf lab16 rtr satu
+  hosts: satu
+  connection: network_cli
+  gather_facts: no
+
+  roles:
+    - lab16satu
+- name: ospf lab16 rtr dua
+  hosts: dua
+  connection: network_cli
+  gather_facts: no
+
+  roles:
+    - lab16dua
+- name: ospf lab16 tiga
+  hosts: tiga
+  connection: network_clie
+  gather_facts: no
+
+  roles:
+    - lab16tiga
