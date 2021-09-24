@@ -20,7 +20,7 @@
     config:
       - name: GigabitEthernet0/0
         ipv4:
-        - address: 12.12.12.2/32
+        - address: 12.12.12.2/24
       - name: loopback0
         ipv4:
         - address: 2.2.2.2/32
