@@ -25,7 +25,7 @@
     lines:
       - ip address 23.23.23.2 255.255.255.0
       - description to satu
-    parents: interfaces GigabitEthernet 0/1
+    parents: interface GigabitEthernet 0/1
 - name: OSPF
   ios_config:
     lines:
