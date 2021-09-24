@@ -7,7 +7,7 @@
 - name: activate interface loopback0
   ios_interfaces:
     config:
-      name: loopback 0
+      name: loopback0
       enabled: True
 - name: ios_config ip address on interface gi 0/0
   ios_config:
